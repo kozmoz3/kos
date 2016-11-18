@@ -10,3 +10,22 @@ C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\bin\Debug\DataModel.
 C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\bin\Debug\EntityFramework.xml
 C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\obj\Debug\BussinesLayer.dll
 C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\obj\Debug\BussinesLayer.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\BussinesLayer.dll.config
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\BussinesLayer.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\BussinesLayer.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\BussinesEntities.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\DataModel.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\EntityFramework.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\LinqToExcel.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\log4net.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\Remotion.Data.Linq.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\Remotion.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\Remotion.Interfaces.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\BussinesEntities.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\DataModel.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\EntityFramework.xml
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\LinqToExcel.xml
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\log4net.xml
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\obj\Debug\BussinesLayer.csprojResolveAssemblyReference.cache
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\obj\Debug\BussinesLayer.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\obj\Debug\BussinesLayer.pdb

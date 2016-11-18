@@ -6,3 +6,18 @@ C:\Users\ESosa\Google Drive\repertorio\Kozmoz\DataModel\obj\Debug\DataModel.dll
 C:\Users\ESosa\Google Drive\repertorio\Kozmoz\DataModel\obj\Debug\DataModel.pdb
 C:\Users\ESosa\Google Drive\repertorio\Kozmoz\DataModel\bin\Debug\EntityFramework.dll
 C:\Users\ESosa\Google Drive\repertorio\Kozmoz\DataModel\bin\Debug\EntityFramework.xml
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\bin\Debug\DataModel.dll.config
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\bin\Debug\DataModel.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\bin\Debug\DataModel.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\bin\Debug\EntityFramework.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\bin\Debug\LinqToExcel.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\bin\Debug\log4net.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\bin\Debug\Remotion.Data.Linq.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\bin\Debug\Remotion.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\bin\Debug\Remotion.Interfaces.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\bin\Debug\EntityFramework.xml
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\bin\Debug\LinqToExcel.xml
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\bin\Debug\log4net.xml
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\obj\Debug\DataModel.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\DataModel\obj\Debug\DataModel.pdb
