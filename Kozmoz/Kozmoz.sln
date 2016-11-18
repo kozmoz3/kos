@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinesLayer", "BussinesLa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BussinesEntities", "BussinesEntities\BussinesEntities.csproj", "{0850CA97-CF1C-4FA5-AC85-4AAE7E03FF08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validaciones", "Validaciones\Validaciones.csproj", "{A0C26DAC-3807-4862-9BC9-D43F1A118098}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{0850CA97-CF1C-4FA5-AC85-4AAE7E03FF08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0850CA97-CF1C-4FA5-AC85-4AAE7E03FF08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0850CA97-CF1C-4FA5-AC85-4AAE7E03FF08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0C26DAC-3807-4862-9BC9-D43F1A118098}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C26DAC-3807-4862-9BC9-D43F1A118098}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C26DAC-3807-4862-9BC9-D43F1A118098}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C26DAC-3807-4862-9BC9-D43F1A118098}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
