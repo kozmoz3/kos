@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="kosmozbusModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="kosmozbusModelStoreContainer">
+          <EntitySet Name="actualizacion" EntityType="kosmozbusModel.Store.actualizacion" store:Type="Tables" Schema="kosmozbus" />
+          <EntitySet Name="departamento" EntityType="kosmozbusModel.Store.departamento" store:Type="Tables" Schema="kosmozbus" />
+          <EntitySet Name="empresaservicio" EntityType="kosmozbusModel.Store.empresaservicio" store:Type="Tables" Schema="kosmozbus" />
+          <EntitySet Name="log" EntityType="kosmozbusModel.Store.log" store:Type="Tables" Schema="kosmozbus" />
+          <EntitySet Name="rol" EntityType="kosmozbusModel.Store.rol" store:Type="Tables" Schema="kosmozbus" />
+          <EntitySet Name="trabajador" EntityType="kosmozbusModel.Store.trabajador" store:Type="Tables" Schema="kosmozbus" />
+          <EntitySet Name="usuario" EntityType="kosmozbusModel.Store.usuario" store:Type="Tables" Schema="kosmozbus" />
+          <AssociationSet Name="departamento_ibfk_1" Association="kosmozbusModel.Store.departamento_ibfk_1">
+            <End Role="empresaservicio" EntitySet="empresaservicio" />
+            <End Role="departamento" EntitySet="departamento" />
+          </AssociationSet>
+          <AssociationSet Name="trabajador_ibfk_1" Association="kosmozbusModel.Store.trabajador_ibfk_1">
+            <End Role="departamento" EntitySet="departamento" />
+            <End Role="trabajador" EntitySet="trabajador" />
+          </AssociationSet>
+          <AssociationSet Name="usuario_ibfk_1" Association="kosmozbusModel.Store.usuario_ibfk_1">
+            <End Role="trabajador" EntitySet="trabajador" />
+            <End Role="usuario" EntitySet="usuario" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="actualizacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="usuario" Type="varchar" MaxLength="50" />
+          <Property Name="nombre_tabla" Type="varchar" MaxLength="35" />
+          <Property Name="registro" Type="varchar" MaxLength="35" />
+          <Property Name="hora" Type="datetime" />
+        </EntityType>
+        <EntityType Name="departamento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idempresafk" Type="int" />
+          <Property Name="no_departamento" Type="varchar" MaxLength="10" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" />
+          <Property Name="nombre_corto" Type="varchar" MaxLength="100" />
+          <Property Name="imagen" Type="varchar" MaxLength="100" />
+          <Property Name="fecha_creacion" Type="date" />
+        </EntityType>
+        <EntityType Name="empresaservicio">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" />
+          <Property Name="nombre_corto" Type="varchar" MaxLength="100" />
+          <Property Name="cabezera" Type="varchar" MaxLength="200" />
+          <Property Name="imagen" Type="varchar" MaxLength="100" />
+          <Property Name="fecha_creacion" Type="date" />
+        </EntityType>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="fecha" Type="date" />
+          <Property Name="usuario" Type="varchar" MaxLength="50" />
+          <Property Name="tabla" Type="varchar" MaxLength="50" />
+          <Property Name="operacion" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="rol">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="varchar" MaxLength="50" />
+          <Property Name="descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="fecha_creaccion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="trabajador">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="iddepartamentofk" Type="int" />
+          <Property Name="nombre" Type="varchar" MaxLength="150" />
+          <Property Name="edad" Type="varchar" MaxLength="3" />
+          <Property Name="genero" Type="varchar" MaxLength="1" />
+          <Property Name="direccion" Type="varchar" MaxLength="200" />
+          <Property Name="telefono" Type="varchar" MaxLength="12" />
+          <Property Name="numero_empleado" Type="varchar" MaxLength="10" />
+          <Property Name="cargo" Type="varchar" MaxLength="50" />
+          <Property Name="imagen" Type="varchar" MaxLength="100" />
+          <Property Name="fecha_creaccion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="idtrabajadorfk" Type="int" />
+          <Property Name="usuario" Type="varchar" MaxLength="65" />
+          <Property Name="contrasena" Type="varchar" MaxLength="65" />
+          <Property Name="estatus" Type="varchar" MaxLength="1" />
+          <Property Name="fecha_creaccion" Type="datetime" />
+        </EntityType>
+        <Association Name="departamento_ibfk_1">
+          <End Role="empresaservicio" Type="kosmozbusModel.Store.empresaservicio" Multiplicity="0..1" />
+          <End Role="departamento" Type="kosmozbusModel.Store.departamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresaservicio">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="departamento">
+              <PropertyRef Name="idempresafk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="trabajador_ibfk_1">
+          <End Role="departamento" Type="kosmozbusModel.Store.departamento" Multiplicity="0..1" />
+          <End Role="trabajador" Type="kosmozbusModel.Store.trabajador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="departamento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="trabajador">
+              <PropertyRef Name="iddepartamentofk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usuario_ibfk_1">
+          <End Role="trabajador" Type="kosmozbusModel.Store.trabajador" Multiplicity="0..1" />
+          <End Role="usuario" Type="kosmozbusModel.Store.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trabajador">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="idtrabajadorfk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="kosmozbusModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="kosmozbusEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="actualizacions" EntityType="kosmozbusModel.actualizacion" />
+          <EntitySet Name="departamentoes" EntityType="kosmozbusModel.departamento" />
+          <EntitySet Name="empresaservicios" EntityType="kosmozbusModel.empresaservicio" />
+          <EntitySet Name="logs" EntityType="kosmozbusModel.log" />
+          <EntitySet Name="rols" EntityType="kosmozbusModel.rol" />
+          <EntitySet Name="trabajadors" EntityType="kosmozbusModel.trabajador" />
+          <EntitySet Name="usuarios" EntityType="kosmozbusModel.usuario" />
+          <AssociationSet Name="departamento_ibfk_1" Association="kosmozbusModel.departamento_ibfk_1">
+            <End Role="empresaservicio" EntitySet="empresaservicios" />
+            <End Role="departamento" EntitySet="departamentoes" />
+          </AssociationSet>
+          <AssociationSet Name="trabajador_ibfk_1" Association="kosmozbusModel.trabajador_ibfk_1">
+            <End Role="departamento" EntitySet="departamentoes" />
+            <End Role="trabajador" EntitySet="trabajadors" />
+          </AssociationSet>
+          <AssociationSet Name="usuario_ibfk_1" Association="kosmozbusModel.usuario_ibfk_1">
+            <End Role="trabajador" EntitySet="trabajadors" />
+            <End Role="usuario" EntitySet="usuarios" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="actualizacion">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="usuario" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="nombre_tabla" Type="String" MaxLength="35" Unicode="false" FixedLength="false" />
+          <Property Name="registro" Type="String" MaxLength="35" Unicode="false" FixedLength="false" />
+          <Property Name="hora" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="departamento">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="idempresafk" Type="Int32" />
+          <Property Name="no_departamento" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="nombre" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="nombre_corto" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="imagen" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_creacion" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="empresaservicio" Relationship="kosmozbusModel.departamento_ibfk_1" FromRole="departamento" ToRole="empresaservicio" />
+          <NavigationProperty Name="trabajadors" Relationship="kosmozbusModel.trabajador_ibfk_1" FromRole="departamento" ToRole="trabajador" />
+        </EntityType>
+        <EntityType Name="empresaservicio">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="nombre_corto" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="cabezera" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="imagen" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_creacion" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="departamentoes" Relationship="kosmozbusModel.departamento_ibfk_1" FromRole="empresaservicio" ToRole="departamento" />
+        </EntityType>
+        <EntityType Name="log">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="fecha" Type="DateTime" Precision="0" />
+          <Property Name="usuario" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="tabla" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="operacion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rol">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="descripcion" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_creaccion" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="trabajador">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="iddepartamentofk" Type="Int32" />
+          <Property Name="nombre" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="edad" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="genero" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="direccion" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+          <Property Name="telefono" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="numero_empleado" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="cargo" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="imagen" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_creaccion" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="departamento" Relationship="kosmozbusModel.trabajador_ibfk_1" FromRole="trabajador" ToRole="departamento" />
+          <NavigationProperty Name="usuarios" Relationship="kosmozbusModel.usuario_ibfk_1" FromRole="trabajador" ToRole="usuario" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="idtrabajadorfk" Type="Int32" />
+          <Property Name="usuario1" Type="String" MaxLength="65" Unicode="false" FixedLength="false" />
+          <Property Name="contrasena" Type="String" MaxLength="65" Unicode="false" FixedLength="false" />
+          <Property Name="estatus" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_creaccion" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="trabajador" Relationship="kosmozbusModel.usuario_ibfk_1" FromRole="usuario" ToRole="trabajador" />
+        </EntityType>
+        <Association Name="departamento_ibfk_1">
+          <End Role="empresaservicio" Type="kosmozbusModel.empresaservicio" Multiplicity="0..1" />
+          <End Role="departamento" Type="kosmozbusModel.departamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="empresaservicio">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="departamento">
+              <PropertyRef Name="idempresafk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="trabajador_ibfk_1">
+          <End Role="departamento" Type="kosmozbusModel.departamento" Multiplicity="0..1" />
+          <End Role="trabajador" Type="kosmozbusModel.trabajador" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="departamento">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="trabajador">
+              <PropertyRef Name="iddepartamentofk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="usuario_ibfk_1">
+          <End Role="trabajador" Type="kosmozbusModel.trabajador" Multiplicity="0..1" />
+          <End Role="usuario" Type="kosmozbusModel.usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="trabajador">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="usuario">
+              <PropertyRef Name="idtrabajadorfk" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="kosmozbusModelStoreContainer" CdmEntityContainer="kosmozbusEntities">
+          <EntitySetMapping Name="actualizacions">
+            <EntityTypeMapping TypeName="kosmozbusModel.actualizacion">
+              <MappingFragment StoreEntitySet="actualizacion">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="nombre_tabla" ColumnName="nombre_tabla" />
+                <ScalarProperty Name="registro" ColumnName="registro" />
+                <ScalarProperty Name="hora" ColumnName="hora" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="departamentoes">
+            <EntityTypeMapping TypeName="kosmozbusModel.departamento">
+              <MappingFragment StoreEntitySet="departamento">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idempresafk" ColumnName="idempresafk" />
+                <ScalarProperty Name="no_departamento" ColumnName="no_departamento" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="nombre_corto" ColumnName="nombre_corto" />
+                <ScalarProperty Name="imagen" ColumnName="imagen" />
+                <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="empresaservicios">
+            <EntityTypeMapping TypeName="kosmozbusModel.empresaservicio">
+              <MappingFragment StoreEntitySet="empresaservicio">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="nombre_corto" ColumnName="nombre_corto" />
+                <ScalarProperty Name="cabezera" ColumnName="cabezera" />
+                <ScalarProperty Name="imagen" ColumnName="imagen" />
+                <ScalarProperty Name="fecha_creacion" ColumnName="fecha_creacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="logs">
+            <EntityTypeMapping TypeName="kosmozbusModel.log">
+              <MappingFragment StoreEntitySet="log">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="tabla" ColumnName="tabla" />
+                <ScalarProperty Name="operacion" ColumnName="operacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rols">
+            <EntityTypeMapping TypeName="kosmozbusModel.rol">
+              <MappingFragment StoreEntitySet="rol">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+                <ScalarProperty Name="fecha_creaccion" ColumnName="fecha_creaccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="trabajadors">
+            <EntityTypeMapping TypeName="kosmozbusModel.trabajador">
+              <MappingFragment StoreEntitySet="trabajador">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="iddepartamentofk" ColumnName="iddepartamentofk" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="edad" ColumnName="edad" />
+                <ScalarProperty Name="genero" ColumnName="genero" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="numero_empleado" ColumnName="numero_empleado" />
+                <ScalarProperty Name="cargo" ColumnName="cargo" />
+                <ScalarProperty Name="imagen" ColumnName="imagen" />
+                <ScalarProperty Name="fecha_creaccion" ColumnName="fecha_creaccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuarios">
+            <EntityTypeMapping TypeName="kosmozbusModel.usuario">
+              <MappingFragment StoreEntitySet="usuario">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="idtrabajadorfk" ColumnName="idtrabajadorfk" />
+                <ScalarProperty Name="usuario1" ColumnName="usuario" />
+                <ScalarProperty Name="contrasena" ColumnName="contrasena" />
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+                <ScalarProperty Name="fecha_creaccion" ColumnName="fecha_creaccion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

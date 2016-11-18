@@ -1,0 +1,8 @@
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\DataModel\bin\Debug\DataModel.dll.config
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\DataModel\bin\Debug\DataModel.dll
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\DataModel\bin\Debug\DataModel.pdb
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\DataModel\obj\Debug\DataModel.dll
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\DataModel\obj\Debug\DataModel.pdb
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\DataModel\bin\Debug\EntityFramework.dll
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\DataModel\bin\Debug\EntityFramework.xml
