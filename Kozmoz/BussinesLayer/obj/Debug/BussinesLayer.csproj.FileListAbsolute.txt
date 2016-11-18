@@ -1,0 +1,12 @@
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\obj\Debug\BussinesLayer.csprojResolveAssemblyReference.cache
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\bin\Debug\BussinesLayer.dll.config
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\bin\Debug\BussinesLayer.dll
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\bin\Debug\BussinesLayer.pdb
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\bin\Debug\BussinesEntities.dll
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\bin\Debug\DataModel.dll
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\bin\Debug\EntityFramework.dll
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\bin\Debug\BussinesEntities.pdb
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\bin\Debug\DataModel.pdb
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\bin\Debug\EntityFramework.xml
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\obj\Debug\BussinesLayer.dll
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesLayer\obj\Debug\BussinesLayer.pdb

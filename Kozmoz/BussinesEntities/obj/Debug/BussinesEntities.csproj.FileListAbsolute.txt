@@ -1,0 +1,8 @@
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesEntities\bin\Debug\BussinesEntities.dll
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesEntities\bin\Debug\BussinesEntities.pdb
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesEntities\obj\Debug\BussinesEntities.csprojResolveAssemblyReference.cache
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesEntities\obj\Debug\BussinesEntities.dll
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesEntities\obj\Debug\BussinesEntities.pdb
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesEntities\bin\Debug\BussinesEntities.dll.config
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesEntities\bin\Debug\EntityFramework.dll
+C:\Users\ESosa\Google Drive\repertorio\Kozmoz\BussinesEntities\bin\Debug\EntityFramework.xml
