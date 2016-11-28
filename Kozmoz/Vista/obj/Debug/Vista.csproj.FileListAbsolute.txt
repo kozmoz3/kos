@@ -15,9 +15,36 @@ C:\Users\ESosa\Google Drive\repertorio\Kozmoz\Vista\bin\Debug\DataModel.pdb
 C:\Users\ESosa\Google Drive\repertorio\Kozmoz\Vista\bin\Debug\EntityFramework.xml
 C:\Users\ESosa\Google Drive\repertorio\Kozmoz\Vista\obj\Debug\Vista.exe
 C:\Users\ESosa\Google Drive\repertorio\Kozmoz\Vista\obj\Debug\Vista.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\Vista.exe.config
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\Vista.exe
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\Vista.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\Archivos.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\BussinesEntities.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\BussinesLayer.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\DataModel.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\EntityFramework.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\LinqToExcel.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\Remotion.Data.Linq.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\Remotion.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\Remotion.Interfaces.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\Archivos.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\BussinesEntities.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\BussinesLayer.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\DataModel.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\EntityFramework.xml
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\LinqToExcel.xml
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.csprojResolveAssemblyReference.cache
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Administrador.CargaMasiva.resources
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Administrador.MenuAdministrador.resources
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Form1.resources
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Properties.Resources.resources
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Prueba.prueba.resources
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Prueba.pruebas.resources
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.csproj.GenerateResource.Cache
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.exe
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Administrador.AltaEmpresa.resources
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\Validaciones.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\Validaciones.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Administrador.AltaDepartamento.resources
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Administrador.AltaTrabajador.resources

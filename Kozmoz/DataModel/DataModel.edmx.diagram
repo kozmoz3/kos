@@ -15,6 +15,13 @@
         <AssociationConnector Association="kosmozbusModel.departamento_ibfk_1" ManuallyRouted="false" />
         <AssociationConnector Association="kosmozbusModel.trabajador_ibfk_1" ManuallyRouted="false" />
         <AssociationConnector Association="kosmozbusModel.usuario_ibfk_1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="kosmozbusModel.ciudad" Width="1.5" PointX="6" PointY="4.625" />
+        <EntityTypeShape EntityType="kosmozbusModel.colonia" Width="1.5" PointX="6.5" PointY="10.75" />
+        <EntityTypeShape EntityType="kosmozbusModel.cp" Width="1.5" PointX="4.375" PointY="10.625" />
+        <EntityTypeShape EntityType="kosmozbusModel.municipio" Width="1.5" PointX="2.375" PointY="10.5" />
+        <AssociationConnector Association="kosmozbusModel.municipio_ibfk_1" />
+        <AssociationConnector Association="kosmozbusModel.colonia_ibfk_1" />
+        <AssociationConnector Association="kosmozbusModel.cp_ibfk_1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

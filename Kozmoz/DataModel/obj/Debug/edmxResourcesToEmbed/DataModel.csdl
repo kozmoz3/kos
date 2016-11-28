@@ -20,6 +20,22 @@
       <End Role="trabajador" EntitySet="trabajadors" />
       <End Role="usuario" EntitySet="usuarios" />
     </AssociationSet>
+    <EntitySet Name="ciudads" EntityType="kosmozbusModel.ciudad" />
+    <EntitySet Name="colonias" EntityType="kosmozbusModel.colonia" />
+    <EntitySet Name="cps" EntityType="kosmozbusModel.cp" />
+    <EntitySet Name="municipios" EntityType="kosmozbusModel.municipio" />
+    <AssociationSet Name="municipio_ibfk_1" Association="kosmozbusModel.municipio_ibfk_1">
+      <End Role="ciudad" EntitySet="ciudads" />
+      <End Role="municipio" EntitySet="municipios" />
+    </AssociationSet>
+    <AssociationSet Name="colonia_ibfk_1" Association="kosmozbusModel.colonia_ibfk_1">
+      <End Role="cp" EntitySet="cps" />
+      <End Role="colonia" EntitySet="colonias" />
+    </AssociationSet>
+    <AssociationSet Name="cp_ibfk_1" Association="kosmozbusModel.cp_ibfk_1">
+      <End Role="municipio" EntitySet="municipios" />
+      <End Role="cp" EntitySet="cps" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="actualizacion">
     <Key>
@@ -44,6 +60,17 @@
     <Property Name="fecha_creacion" Type="DateTime" Precision="0" />
     <NavigationProperty Name="empresaservicio" Relationship="kosmozbusModel.departamento_ibfk_1" FromRole="departamento" ToRole="empresaservicio" />
     <NavigationProperty Name="trabajadors" Relationship="kosmozbusModel.trabajador_ibfk_1" FromRole="departamento" ToRole="trabajador" />
+    <Property Type="String" Name="calle" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="colonia" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="cp" Nullable="false" />
+    <Property Type="String" Name="municipio" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ciudad" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="encargado1" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="encargado2" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="correo1" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="coreo2" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="telefono1" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="telefono2" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="empresaservicio">
     <Key>
@@ -56,6 +83,17 @@
     <Property Name="imagen" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="fecha_creacion" Type="DateTime" Precision="0" />
     <NavigationProperty Name="departamentoes" Relationship="kosmozbusModel.departamento_ibfk_1" FromRole="empresaservicio" ToRole="departamento" />
+    <Property Type="String" Name="calle" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="colonia" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="cp" Nullable="false" />
+    <Property Type="String" Name="municipio" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ciudad" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="encargado1" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="encargado2" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="correo1" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="coreo2" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="telefono1" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="telefono2" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="log">
     <Key>
@@ -66,6 +104,7 @@
     <Property Name="usuario" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="tabla" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="operacion" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Type="String" Name="registro" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="rol">
     <Key>
@@ -139,6 +178,77 @@
       </Principal>
       <Dependent Role="usuario">
         <PropertyRef Name="idtrabajadorfk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ciudad">
+    <Key>
+      <PropertyRef Name="clavec" />
+    </Key>
+    <Property Type="Int32" Name="clavec" Nullable="false" />
+    <Property Type="String" Name="nombrec" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="municipios" Relationship="kosmozbusModel.municipio_ibfk_1" FromRole="ciudad" ToRole="municipio" />
+  </EntityType>
+  <EntityType Name="colonia">
+    <Key>
+      <PropertyRef Name="claveco" />
+    </Key>
+    <Property Type="Int32" Name="claveco" Nullable="false" />
+    <Property Type="Int32" Name="clavecfk" />
+    <NavigationProperty Name="cp" Relationship="kosmozbusModel.colonia_ibfk_1" FromRole="colonia" ToRole="cp" />
+  </EntityType>
+  <EntityType Name="cp">
+    <Key>
+      <PropertyRef Name="clavec" />
+    </Key>
+    <Property Type="Int32" Name="clavec" Nullable="false" />
+    <Property Type="Int32" Name="clavemfk" />
+    <NavigationProperty Name="colonias" Relationship="kosmozbusModel.colonia_ibfk_1" FromRole="cp" ToRole="colonia" />
+    <NavigationProperty Name="municipio" Relationship="kosmozbusModel.cp_ibfk_1" FromRole="cp" ToRole="municipio" />
+  </EntityType>
+  <EntityType Name="municipio">
+    <Key>
+      <PropertyRef Name="clavem" />
+    </Key>
+    <Property Type="Int32" Name="clavem" Nullable="false" />
+    <Property Type="Int32" Name="clavecfk" />
+    <Property Type="String" Name="nombrem" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ciudad" Relationship="kosmozbusModel.municipio_ibfk_1" FromRole="municipio" ToRole="ciudad" />
+    <NavigationProperty Name="cps" Relationship="kosmozbusModel.cp_ibfk_1" FromRole="municipio" ToRole="cp" />
+  </EntityType>
+  <Association Name="municipio_ibfk_1">
+    <End Type="kosmozbusModel.ciudad" Role="ciudad" Multiplicity="0..1" />
+    <End Type="kosmozbusModel.municipio" Role="municipio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ciudad">
+        <PropertyRef Name="clavec" />
+      </Principal>
+      <Dependent Role="municipio">
+        <PropertyRef Name="clavecfk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="colonia_ibfk_1">
+    <End Type="kosmozbusModel.cp" Role="cp" Multiplicity="0..1" />
+    <End Type="kosmozbusModel.colonia" Role="colonia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cp">
+        <PropertyRef Name="clavec" />
+      </Principal>
+      <Dependent Role="colonia">
+        <PropertyRef Name="clavecfk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cp_ibfk_1">
+    <End Type="kosmozbusModel.municipio" Role="municipio" Multiplicity="0..1" />
+    <End Type="kosmozbusModel.cp" Role="cp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="municipio">
+        <PropertyRef Name="clavem" />
+      </Principal>
+      <Dependent Role="cp">
+        <PropertyRef Name="clavemfk" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

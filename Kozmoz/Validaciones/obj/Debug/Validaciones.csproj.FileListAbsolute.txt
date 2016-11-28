@@ -7,5 +7,8 @@ C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Validaciones
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Validaciones\bin\Debug\Remotion.Interfaces.dll
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Validaciones\bin\Debug\LinqToExcel.xml
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Validaciones\bin\Debug\log4net.xml
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Validaciones\obj\Debug\Validaciones.csprojResolveAssemblyReference.cache
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Validaciones\obj\Debug\Validaciones.Form1.resources
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Validaciones\obj\Debug\Validaciones.csproj.GenerateResource.Cache
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Validaciones\obj\Debug\Validaciones.dll
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Validaciones\obj\Debug\Validaciones.pdb

@@ -61,6 +61,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Administrador\AltaDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\AltaDepartamento.Designer.cs">
+      <DependentUpon>AltaDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\AltaEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\AltaEmpresa.Designer.cs">
+      <DependentUpon>AltaEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\AltaTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\AltaTrabajador.Designer.cs">
+      <DependentUpon>AltaTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrador\CargaMasiva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrador\CargaMasiva.Designer.cs">
+      <DependentUpon>CargaMasiva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Administrador\MenuAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +111,18 @@
     <Compile Include="Prueba\pruebas.Designer.cs">
       <DependentUpon>pruebas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Administrador\AltaDepartamento.resx">
+      <DependentUpon>AltaDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\AltaEmpresa.resx">
+      <DependentUpon>AltaEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\AltaTrabajador.resx">
+      <DependentUpon>AltaTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrador\CargaMasiva.resx">
+      <DependentUpon>CargaMasiva.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Administrador\MenuAdministrador.resx">
       <DependentUpon>MenuAdministrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +138,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Prueba\prueba.resx">
+      <DependentUpon>prueba.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prueba\pruebas.resx">
       <DependentUpon>pruebas.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +159,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Archivos\Archivos.csproj">
+      <Project>{0a3f483c-f708-4d82-ad51-4d7e14a5fa5c}</Project>
+      <Name>Archivos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BussinesEntities\BussinesEntities.csproj">
       <Project>{0850ca97-cf1c-4fa5-ac85-4aae7e03ff08}</Project>
       <Name>BussinesEntities</Name>
@@ -131,6 +174,10 @@
     <ProjectReference Include="..\DataModel\DataModel.csproj">
       <Project>{f8005b8b-8c12-42ec-b261-c7d453faf951}</Project>
       <Name>DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Validaciones\Validaciones.csproj">
+      <Project>{a0c26dac-3807-4862-9bc9-d43f1a118098}</Project>
+      <Name>Validaciones</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

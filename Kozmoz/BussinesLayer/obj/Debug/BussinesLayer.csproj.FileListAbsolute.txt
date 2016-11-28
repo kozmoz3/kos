@@ -21,8 +21,10 @@ C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLaye
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\Remotion.Data.Linq.dll
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\Remotion.dll
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\Remotion.Interfaces.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\Validaciones.dll
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\BussinesEntities.pdb
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\DataModel.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\Validaciones.pdb
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\EntityFramework.xml
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\LinqToExcel.xml
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesLayer\bin\Debug\log4net.xml

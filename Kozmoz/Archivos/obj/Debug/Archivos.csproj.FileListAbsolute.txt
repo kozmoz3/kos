@@ -1,0 +1,4 @@
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Archivos\bin\Debug\Archivos.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Archivos\bin\Debug\Archivos.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Archivos\obj\Debug\Archivos.dll
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Archivos\obj\Debug\Archivos.pdb

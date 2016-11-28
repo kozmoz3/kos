@@ -2,15 +2,31 @@
 <Schema Namespace="kosmozbusModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityContainer Name="kosmozbusModelStoreContainer">
     <EntitySet Name="actualizacion" EntityType="kosmozbusModel.Store.actualizacion" store:Type="Tables" Schema="kosmozbus" />
+    <EntitySet Name="ciudad" EntityType="kosmozbusModel.Store.ciudad" store:Type="Tables" Schema="kosmozbus" />
+    <EntitySet Name="colonia" EntityType="kosmozbusModel.Store.colonia" store:Type="Tables" Schema="kosmozbus" />
+    <EntitySet Name="cp" EntityType="kosmozbusModel.Store.cp" store:Type="Tables" Schema="kosmozbus" />
     <EntitySet Name="departamento" EntityType="kosmozbusModel.Store.departamento" store:Type="Tables" Schema="kosmozbus" />
     <EntitySet Name="empresaservicio" EntityType="kosmozbusModel.Store.empresaservicio" store:Type="Tables" Schema="kosmozbus" />
     <EntitySet Name="log" EntityType="kosmozbusModel.Store.log" store:Type="Tables" Schema="kosmozbus" />
+    <EntitySet Name="municipio" EntityType="kosmozbusModel.Store.municipio" store:Type="Tables" Schema="kosmozbus" />
     <EntitySet Name="rol" EntityType="kosmozbusModel.Store.rol" store:Type="Tables" Schema="kosmozbus" />
     <EntitySet Name="trabajador" EntityType="kosmozbusModel.Store.trabajador" store:Type="Tables" Schema="kosmozbus" />
     <EntitySet Name="usuario" EntityType="kosmozbusModel.Store.usuario" store:Type="Tables" Schema="kosmozbus" />
+    <AssociationSet Name="colonia_ibfk_1" Association="kosmozbusModel.Store.colonia_ibfk_1">
+      <End Role="cp" EntitySet="cp" />
+      <End Role="colonia" EntitySet="colonia" />
+    </AssociationSet>
+    <AssociationSet Name="cp_ibfk_1" Association="kosmozbusModel.Store.cp_ibfk_1">
+      <End Role="municipio" EntitySet="municipio" />
+      <End Role="cp" EntitySet="cp" />
+    </AssociationSet>
     <AssociationSet Name="departamento_ibfk_1" Association="kosmozbusModel.Store.departamento_ibfk_1">
       <End Role="empresaservicio" EntitySet="empresaservicio" />
       <End Role="departamento" EntitySet="departamento" />
+    </AssociationSet>
+    <AssociationSet Name="municipio_ibfk_1" Association="kosmozbusModel.Store.municipio_ibfk_1">
+      <End Role="ciudad" EntitySet="ciudad" />
+      <End Role="municipio" EntitySet="municipio" />
     </AssociationSet>
     <AssociationSet Name="trabajador_ibfk_1" Association="kosmozbusModel.Store.trabajador_ibfk_1">
       <End Role="departamento" EntitySet="departamento" />
@@ -31,6 +47,27 @@
     <Property Name="registro" Type="varchar" MaxLength="35" />
     <Property Name="hora" Type="datetime" />
   </EntityType>
+  <EntityType Name="ciudad">
+    <Key>
+      <PropertyRef Name="clavec" />
+    </Key>
+    <Property Name="clavec" Type="int" Nullable="false" />
+    <Property Name="nombrec" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="colonia">
+    <Key>
+      <PropertyRef Name="claveco" />
+    </Key>
+    <Property Name="claveco" Type="int" Nullable="false" />
+    <Property Name="clavecfk" Type="int" />
+  </EntityType>
+  <EntityType Name="cp">
+    <Key>
+      <PropertyRef Name="clavec" />
+    </Key>
+    <Property Name="clavec" Type="int" Nullable="false" />
+    <Property Name="clavemfk" Type="int" />
+  </EntityType>
   <EntityType Name="departamento">
     <Key>
       <PropertyRef Name="id" />
@@ -41,6 +78,17 @@
     <Property Name="nombre" Type="varchar" MaxLength="100" />
     <Property Name="nombre_corto" Type="varchar" MaxLength="100" />
     <Property Name="imagen" Type="varchar" MaxLength="100" />
+    <Property Name="calle" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="colonia" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="cp" Type="int" Nullable="false" />
+    <Property Name="municipio" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="ciudad" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="encargado1" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="encargado2" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="correo1" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="coreo2" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="telefono1" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="telefono2" Type="varchar" Nullable="false" MaxLength="15" />
     <Property Name="fecha_creacion" Type="date" />
   </EntityType>
   <EntityType Name="empresaservicio">
@@ -52,6 +100,17 @@
     <Property Name="nombre_corto" Type="varchar" MaxLength="100" />
     <Property Name="cabezera" Type="varchar" MaxLength="200" />
     <Property Name="imagen" Type="varchar" MaxLength="100" />
+    <Property Name="calle" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="colonia" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="cp" Type="int" Nullable="false" />
+    <Property Name="municipio" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="ciudad" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="encargado1" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="encargado2" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="correo1" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="coreo2" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="telefono1" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="telefono2" Type="varchar" Nullable="false" MaxLength="15" />
     <Property Name="fecha_creacion" Type="date" />
   </EntityType>
   <EntityType Name="log">
@@ -62,7 +121,16 @@
     <Property Name="fecha" Type="date" />
     <Property Name="usuario" Type="varchar" MaxLength="50" />
     <Property Name="tabla" Type="varchar" MaxLength="50" />
+    <Property Name="registro" Type="varchar" Nullable="false" MaxLength="100" />
     <Property Name="operacion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="municipio">
+    <Key>
+      <PropertyRef Name="clavem" />
+    </Key>
+    <Property Name="clavem" Type="int" Nullable="false" />
+    <Property Name="clavecfk" Type="int" />
+    <Property Name="nombrem" Type="varchar" MaxLength="100" />
   </EntityType>
   <EntityType Name="rol">
     <Key>
@@ -100,6 +168,30 @@
     <Property Name="estatus" Type="varchar" MaxLength="1" />
     <Property Name="fecha_creaccion" Type="datetime" />
   </EntityType>
+  <Association Name="colonia_ibfk_1">
+    <End Role="cp" Type="kosmozbusModel.Store.cp" Multiplicity="0..1" />
+    <End Role="colonia" Type="kosmozbusModel.Store.colonia" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cp">
+        <PropertyRef Name="clavec" />
+      </Principal>
+      <Dependent Role="colonia">
+        <PropertyRef Name="clavecfk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="cp_ibfk_1">
+    <End Role="municipio" Type="kosmozbusModel.Store.municipio" Multiplicity="0..1" />
+    <End Role="cp" Type="kosmozbusModel.Store.cp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="municipio">
+        <PropertyRef Name="clavem" />
+      </Principal>
+      <Dependent Role="cp">
+        <PropertyRef Name="clavemfk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="departamento_ibfk_1">
     <End Role="empresaservicio" Type="kosmozbusModel.Store.empresaservicio" Multiplicity="0..1" />
     <End Role="departamento" Type="kosmozbusModel.Store.departamento" Multiplicity="*" />
@@ -109,6 +201,18 @@
       </Principal>
       <Dependent Role="departamento">
         <PropertyRef Name="idempresafk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="municipio_ibfk_1">
+    <End Role="ciudad" Type="kosmozbusModel.Store.ciudad" Multiplicity="0..1" />
+    <End Role="municipio" Type="kosmozbusModel.Store.municipio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ciudad">
+        <PropertyRef Name="clavec" />
+      </Principal>
+      <Dependent Role="municipio">
+        <PropertyRef Name="clavecfk" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

@@ -9,20 +9,35 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BussinesLayer;
 using DataModel;
+using Vista.Administrador;
 namespace Vista
 {
     public partial class Form1 : Form
     {
-        Prueba pr = new Prueba();
+        
         public Form1()
         {
             InitializeComponent();
-            datos.DataSource = pr.index();
+           
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            datos.DataSource = pr.index();
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            //CargaMasiva c = new CargaMasiva();
+           // AltaEmpresa c = new AltaEmpresa();
+          //  AltaDepartamento c = new AltaDepartamento();
+            MenuAdministrador c = new MenuAdministrador("enrique");
+            c.Show();
         }
     }
 }
