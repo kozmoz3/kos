@@ -20,3 +20,4 @@ C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesEnti
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesEntities\bin\Debug\log4net.xml
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesEntities\obj\Debug\BussinesEntities.dll
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesEntities\obj\Debug\BussinesEntities.pdb
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\BussinesEntities\obj\Debug\BussinesEntities.csprojResolveAssemblyReference.cache

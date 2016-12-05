@@ -15,6 +15,7 @@ namespace BussinesLayer.Administrador
         {
             try
             {
+
                 using (kosmozbusEntities db = new kosmozbusEntities())
                 { 
                     var query =(from n in db.empresaservicios

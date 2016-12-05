@@ -51,7 +51,6 @@ namespace Vista.Administrador
                 }
 
                 treeView1.Nodes.Add(root);
-
             }
         }
 
