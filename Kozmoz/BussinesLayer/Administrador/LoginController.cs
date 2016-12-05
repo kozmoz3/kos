@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataModel;
+using System.Windows.Forms;
 namespace BussinesLayer.Administrador
 {
     public class LoginController
@@ -24,7 +25,7 @@ namespace BussinesLayer.Administrador
  
             }catch (Exception ex) 
             {
-                Console.Write(ex);
+                MessageBox.Show("Eror " + ex);
                 throw;
             }
         }

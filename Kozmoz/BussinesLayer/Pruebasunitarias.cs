@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataModel;
+using System.Windows.Forms;
 
 namespace BussinesLayer
 {
@@ -22,6 +23,7 @@ namespace BussinesLayer
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Eror " + ex);
                 throw;
             }
         }
