@@ -52,5 +52,12 @@ namespace Vista.Administrador
             trabajador.MdiParent = this;
             trabajador.Show();
         }
+
+        private void aLTADEEMPRESAToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            AltaEmpresa empresa = new AltaEmpresa(lbusuario.Text);
+            empresa.MdiParent = this;
+            empresa.Show();
+        }
     }
 }
