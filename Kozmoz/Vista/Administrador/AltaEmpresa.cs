@@ -23,6 +23,8 @@ namespace Vista.Administrador
         private EmpresaController funcion = new EmpresaController();
         private CaracteresValidos validar = new CaracteresValidos();
         private String usuarios;
+        private DepartamentoController departamento = new DepartamentoController();
+        private TrabajadorController trabajadores = new TrabajadorController();
 
         public AltaEmpresa()
         {
@@ -31,8 +33,26 @@ namespace Vista.Administrador
         public AltaEmpresa(String usuario)
         {
             InitializeComponent();
-           
+
             this.usuarios = usuario;
+            muestratreview();
+        }
+        public void muestratreview()
+        {
+            var entidades = departamento.muestraacombo();
+            foreach (var item in entidades)
+            {
+                TreeNode root = new TreeNode(item.nombre);
+                var depa = trabajadores.muestra_departamento(item.id);
+                foreach(var item2 in depa)
+                {
+                    TreeNode root2 = new TreeNode(item2.nombre);
+                    root.Nodes.Add(root2);
+                }
+
+                treeView1.Nodes.Add(root);
+
+            }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -42,13 +62,13 @@ namespace Vista.Administrador
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-           
+
             if (validar.ValidaTextBoxVacios(this) == false)
             {
                 MessageBox.Show("Error todos los campos deben de ser llenados");
-                return; 
+                return;
             }
-            
+
             dao.nombre = txtnombre.Text;
             dao.nombre_corto = txtnombrecorto.Text;
             dao.imagen = txtimagen.Text;
@@ -76,6 +96,7 @@ namespace Vista.Administrador
                 funcionlog.registro(daolog);
                 MessageBox.Show("Empresa registarada exitosamente ");
                 limpiar();
+                muestratreview();
             }
             else
             {
@@ -100,6 +121,11 @@ namespace Vista.Administrador
             txtcorreo2.Text = "";
             txttelefono1.Text = "";
             txttelefono2.Text = "";
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+           MessageBox.Show(e+"");
         }
     }
 }

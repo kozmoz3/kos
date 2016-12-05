@@ -34,6 +34,8 @@
             this.aLTADEEMPRESAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.direccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cARGADEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tRABAJADORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aLTADETRABAJADORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRUEBAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRUEBA2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRUEBA3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,8 +44,7 @@
             this.btncerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbusuario = new System.Windows.Forms.Label();
-            this.tRABAJADORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aLTADETRABAJADORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aLTADEPERMISOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,6 +102,22 @@
             this.cARGADEToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.cARGADEToolStripMenuItem.Text = "ALTA DE DEPARTAMENTOS";
             this.cARGADEToolStripMenuItem.Click += new System.EventHandler(this.cARGADEToolStripMenuItem_Click);
+            // 
+            // tRABAJADORESToolStripMenuItem
+            // 
+            this.tRABAJADORESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aLTADETRABAJADORESToolStripMenuItem,
+            this.aLTADEPERMISOSToolStripMenuItem});
+            this.tRABAJADORESToolStripMenuItem.Name = "tRABAJADORESToolStripMenuItem";
+            this.tRABAJADORESToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.tRABAJADORESToolStripMenuItem.Text = "TRABAJADORES";
+            // 
+            // aLTADETRABAJADORESToolStripMenuItem
+            // 
+            this.aLTADETRABAJADORESToolStripMenuItem.Name = "aLTADETRABAJADORESToolStripMenuItem";
+            this.aLTADETRABAJADORESToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.aLTADETRABAJADORESToolStripMenuItem.Text = "ALTA DE TRABAJADORES";
+            this.aLTADETRABAJADORESToolStripMenuItem.Click += new System.EventHandler(this.aLTADETRABAJADORESToolStripMenuItem_Click);
             // 
             // pRUEBAToolStripMenuItem
             // 
@@ -164,20 +181,11 @@
             this.lbusuario.TabIndex = 6;
             this.lbusuario.Text = "label2";
             // 
-            // tRABAJADORESToolStripMenuItem
+            // aLTADEPERMISOSToolStripMenuItem
             // 
-            this.tRABAJADORESToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aLTADETRABAJADORESToolStripMenuItem});
-            this.tRABAJADORESToolStripMenuItem.Name = "tRABAJADORESToolStripMenuItem";
-            this.tRABAJADORESToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
-            this.tRABAJADORESToolStripMenuItem.Text = "TRABAJADORES";
-            // 
-            // aLTADETRABAJADORESToolStripMenuItem
-            // 
-            this.aLTADETRABAJADORESToolStripMenuItem.Name = "aLTADETRABAJADORESToolStripMenuItem";
-            this.aLTADETRABAJADORESToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.aLTADETRABAJADORESToolStripMenuItem.Text = "ALTA DE TRABAJADORES";
-            this.aLTADETRABAJADORESToolStripMenuItem.Click += new System.EventHandler(this.aLTADETRABAJADORESToolStripMenuItem_Click);
+            this.aLTADEPERMISOSToolStripMenuItem.Name = "aLTADEPERMISOSToolStripMenuItem";
+            this.aLTADEPERMISOSToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.aLTADEPERMISOSToolStripMenuItem.Text = "ALTA DE PERMISOS";
             // 
             // MenuAdministrador
             // 
@@ -218,6 +226,7 @@
         private System.Windows.Forms.ToolStripMenuItem cARGADEDATOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tRABAJADORESToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aLTADETRABAJADORESToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aLTADEPERMISOSToolStripMenuItem;
 
 
     }

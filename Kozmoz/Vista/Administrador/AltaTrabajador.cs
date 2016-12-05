@@ -18,6 +18,8 @@ namespace Vista.Administrador
     {
         private DepartamentoController funcion = new DepartamentoController();
         private TrabajadorController tabajador = new TrabajadorController();
+        private trabajador dtotrabajador = new trabajador();
+        private usuario dtousuario = new usuario();
 
         private String usuarios;
 
@@ -40,6 +42,24 @@ namespace Vista.Administrador
             cmbempresa.DataSource = funcion.muestraacombo();
             cmbempresa.DisplayMember = "nombre";
             cmbempresa.ValueMember = "id";
+        }
+        private void muestra_departamento(int id)
+        {
+            
+            cmbdepartamento.DataSource = tabajador.muestra_departamento(id);
+            cmbdepartamento.DisplayMember = "nombre";
+            cmbdepartamento.ValueMember = "id";
+        }
+
+        private void cmbempresa_TextChanged(object sender, EventArgs e)
+        {
+            int id = cmbempresa.SelectedIndex + 1;
+            muestra_departamento( id);
+        }
+
+        private void btnagregar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

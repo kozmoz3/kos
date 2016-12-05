@@ -11,16 +11,41 @@ namespace BussinesLayer.Administrador
 {
     public class TrabajadorController
     {
-        public void muestra_departamento(int idfk)
+        public List<departamento> muestra_departamento(int idfk)
         {
             try {
                 using (kosmozbusEntities db = new kosmozbusEntities())
-                { 
-                
+                {
+                 
+                    var query =(from n in db.departamentoes
+                                    where n.idempresafk ==idfk
+                        select n).ToList();
+                    return query;
                 }
+                
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Error en la lista departamento "+ex);
+                throw;
+            }
+        }
+
+        public void alta_trabajador(trabajador dtotabajador, usuario dtousuario)
+        {
+
+            try
+            {
+                using (kosmozbusEntities db = new kosmozbusEntities())
+                {
+
+                    
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error alta de trabajador" + ex);
                 throw;
             }
         }
