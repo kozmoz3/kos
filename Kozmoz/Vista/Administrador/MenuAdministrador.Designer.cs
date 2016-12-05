@@ -36,6 +36,7 @@
             this.cARGADEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tRABAJADORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aLTADETRABAJADORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aLTADEPERMISOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRUEBAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRUEBA2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pRUEBA3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,18 +45,11 @@
             this.btncerrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lbusuario = new System.Windows.Forms.Label();
-            this.aLTADEPERMISOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rEGISTROToolStripMenuItem,
-            this.pRUEBAToolStripMenuItem,
-            this.pRUEBA2ToolStripMenuItem,
-            this.pRUEBA3ToolStripMenuItem,
-            this.aYUDAToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1192, 24);
@@ -64,18 +58,12 @@
             // 
             // rEGISTROToolStripMenuItem
             // 
-            this.rEGISTROToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eMPRESADESERVICIOToolStripMenuItem,
-            this.direccionToolStripMenuItem,
-            this.tRABAJADORESToolStripMenuItem});
             this.rEGISTROToolStripMenuItem.Name = "rEGISTROToolStripMenuItem";
             this.rEGISTROToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.rEGISTROToolStripMenuItem.Text = "REGISTRO";
             // 
             // eMPRESADESERVICIOToolStripMenuItem
             // 
-            this.eMPRESADESERVICIOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aLTADEEMPRESAToolStripMenuItem});
             this.eMPRESADESERVICIOToolStripMenuItem.Name = "eMPRESADESERVICIOToolStripMenuItem";
             this.eMPRESADESERVICIOToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.eMPRESADESERVICIOToolStripMenuItem.Text = "EMPRESA DE SERVICIO";
@@ -118,6 +106,12 @@
             this.aLTADETRABAJADORESToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.aLTADETRABAJADORESToolStripMenuItem.Text = "ALTA DE TRABAJADORES";
             this.aLTADETRABAJADORESToolStripMenuItem.Click += new System.EventHandler(this.aLTADETRABAJADORESToolStripMenuItem_Click);
+            // 
+            // aLTADEPERMISOSToolStripMenuItem
+            // 
+            this.aLTADEPERMISOSToolStripMenuItem.Name = "aLTADEPERMISOSToolStripMenuItem";
+            this.aLTADEPERMISOSToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.aLTADEPERMISOSToolStripMenuItem.Text = "ALTA DE PERMISOS";
             // 
             // pRUEBAToolStripMenuItem
             // 
@@ -180,12 +174,6 @@
             this.lbusuario.Size = new System.Drawing.Size(35, 13);
             this.lbusuario.TabIndex = 6;
             this.lbusuario.Text = "label2";
-            // 
-            // aLTADEPERMISOSToolStripMenuItem
-            // 
-            this.aLTADEPERMISOSToolStripMenuItem.Name = "aLTADEPERMISOSToolStripMenuItem";
-            this.aLTADEPERMISOSToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.aLTADEPERMISOSToolStripMenuItem.Text = "ALTA DE PERMISOS";
             // 
             // MenuAdministrador
             // 

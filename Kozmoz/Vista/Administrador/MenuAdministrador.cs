@@ -37,6 +37,7 @@ namespace Vista.Administrador
             AltaEmpresa empresa = new AltaEmpresa(lbusuario.Text);
             empresa.MdiParent = this;
             empresa.Show();
+
         }
 
         private void cARGADEToolStripMenuItem_Click(object sender, EventArgs e)
