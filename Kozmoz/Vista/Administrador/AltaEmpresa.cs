@@ -49,6 +49,7 @@ namespace Vista.Administrador
                     TreeNode root2 = new TreeNode(item2.nombre);
                     root.Nodes.Add(root2);
                 }
+
                 treeView1.Nodes.Add(root);
             }
         }
