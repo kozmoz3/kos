@@ -27,7 +27,7 @@ namespace BussinesLayer
             }
             catch (Exception ex)
             {
-                  MessageBox.Show("Eror "+ex);
+                  MessageBox.Show("Eror empresa "+ex);
                 throw;
             }
         }
