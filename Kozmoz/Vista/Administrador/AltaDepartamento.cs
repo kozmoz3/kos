@@ -23,6 +23,7 @@ namespace Vista.Administrador
         DateTime fechaHoy = DateTime.Now;
         private LogController funcionlog = new LogController();
         private log daolog = new log();
+        private TrabajadorController trabajadores = new TrabajadorController();
         public AltaDepartamento()
         {
             InitializeComponent();
@@ -37,6 +38,22 @@ namespace Vista.Administrador
         private void AltaDepartamento_Load(object sender, EventArgs e)
         {
             muestra();
+        }
+        public void muestradepartamento(int id)
+        {
+            treeView1.Nodes.Clear();
+            var entidades = trabajadores.muestra_departamento(id);
+            foreach (var item in entidades)
+            {
+                TreeNode root = new TreeNode(item.nombre);
+                var trabajadoresd = funcion.muestra_trabajador(item.id);
+                foreach(var item2 in trabajadoresd)
+                {
+                    TreeNode root2 = new TreeNode(item.nombre);
+                    root.Nodes.Add(root2);
+                }
+                treeView1.Nodes.Add(root);
+            }
         }
         private void muestra()
         {
@@ -105,6 +122,45 @@ namespace Vista.Administrador
             txtcorreo2.Text = "";
             txttelefono1.Text = "";
             txttelefono2.Text = "";
+        }
+
+        private void cmbempresa_TextChanged(object sender, EventArgs e)
+        {
+            int id = cmbempresa.SelectedIndex + 1;
+            muestradepartamento(id);
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+          
+            String nombrenodo = e.Node.FullPath;
+                  int id = cmbempresa.SelectedIndex + 1;
+        //    MessageBox.Show(nombrenodo);
+           List<departamento> depa= funcion.listar_departamento(nombrenodo, id);
+           var indice = depa[0];
+
+           txtnombre.Text = indice.nombre;
+           txtnombrecorto.Text = indice.nombre_corto;
+           txtimagen.Text = indice.imagen;
+           txtnum.Text = indice.no_departamento;
+            
+          txtcalle.Text = indice.calle;
+           txtcolonia.Text = indice.colonia;
+           txtcp.Text = indice.cp+"";
+           txtmunicipio.Text = indice.municipio;
+           txtciudad.Text = indice.ciudad;
+           txtencargado1.Text = indice.encargado1;
+           txtencargado.Text = indice.encargado2;
+           txtcorreo1.Text = indice.correo1;
+           txtcorreo2.Text = indice.coreo2;
+           txttelefono1.Text = indice.telefono1;
+           txttelefono2.Text = indice.telefono2;
+          
+        }
+
+        private void btnactualizar_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

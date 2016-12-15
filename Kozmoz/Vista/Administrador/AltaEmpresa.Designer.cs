@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AltaEmpresa));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -63,12 +64,19 @@
             this.txtimagen = new System.Windows.Forms.TextBox();
             this.btnimagen = new System.Windows.Forms.Button();
             this.btnguardar = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtid = new System.Windows.Forms.Label();
+            this.btnactualizar = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(222, 40);
+            this.label1.Location = new System.Drawing.Point(221, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(130, 13);
             this.label1.TabIndex = 0;
@@ -103,7 +111,7 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(412, 33);
+            this.txtnombre.Location = new System.Drawing.Point(412, 54);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(184, 20);
             this.txtnombre.TabIndex = 4;
@@ -126,9 +134,9 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 21);
+            this.treeView1.Location = new System.Drawing.Point(12, 91);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(176, 575);
+            this.treeView1.Size = new System.Drawing.Size(176, 505);
             this.treeView1.TabIndex = 7;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
@@ -152,7 +160,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(423, 514);
+            this.label13.Location = new System.Drawing.Point(861, 467);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(73, 13);
             this.label13.TabIndex = 53;
@@ -161,7 +169,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(208, 514);
+            this.label12.Location = new System.Drawing.Point(861, 397);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 13);
             this.label12.TabIndex = 52;
@@ -170,7 +178,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(853, 397);
+            this.label11.Location = new System.Drawing.Point(645, 467);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(59, 13);
             this.label11.TabIndex = 51;
@@ -188,7 +196,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(423, 397);
+            this.label9.Location = new System.Drawing.Point(208, 467);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 13);
             this.label9.TabIndex = 49;
@@ -258,21 +266,21 @@
             // 
             // txttelefono2
             // 
-            this.txttelefono2.Location = new System.Drawing.Point(426, 539);
+            this.txttelefono2.Location = new System.Drawing.Point(856, 483);
             this.txttelefono2.Name = "txttelefono2";
             this.txttelefono2.Size = new System.Drawing.Size(170, 20);
             this.txttelefono2.TabIndex = 41;
             // 
             // txttelefono1
             // 
-            this.txttelefono1.Location = new System.Drawing.Point(211, 539);
+            this.txttelefono1.Location = new System.Drawing.Point(856, 432);
             this.txttelefono1.Name = "txttelefono1";
             this.txttelefono1.Size = new System.Drawing.Size(170, 20);
             this.txttelefono1.TabIndex = 40;
             // 
             // txtcorreo2
             // 
-            this.txtcorreo2.Location = new System.Drawing.Point(856, 432);
+            this.txtcorreo2.Location = new System.Drawing.Point(645, 483);
             this.txtcorreo2.Name = "txtcorreo2";
             this.txtcorreo2.Size = new System.Drawing.Size(170, 20);
             this.txtcorreo2.TabIndex = 39;
@@ -286,16 +294,16 @@
             // 
             // txtencargado1
             // 
-            this.txtencargado1.Location = new System.Drawing.Point(426, 432);
+            this.txtencargado1.Location = new System.Drawing.Point(211, 483);
             this.txtencargado1.Name = "txtencargado1";
-            this.txtencargado1.Size = new System.Drawing.Size(170, 20);
+            this.txtencargado1.Size = new System.Drawing.Size(365, 20);
             this.txtencargado1.TabIndex = 37;
             // 
             // txtencargado
             // 
             this.txtencargado.Location = new System.Drawing.Point(211, 432);
             this.txtencargado.Name = "txtencargado";
-            this.txtencargado.Size = new System.Drawing.Size(170, 20);
+            this.txtencargado.Size = new System.Drawing.Size(365, 20);
             this.txtencargado.TabIndex = 36;
             // 
             // txtcp
@@ -344,7 +352,7 @@
             // 
             // btnguardar
             // 
-            this.btnguardar.Location = new System.Drawing.Point(950, 539);
+            this.btnguardar.Location = new System.Drawing.Point(678, 577);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(147, 34);
             this.btnguardar.TabIndex = 58;
@@ -352,11 +360,73 @@
             this.btnguardar.UseVisualStyleBackColor = true;
             this.btnguardar.Click += new System.EventHandler(this.btnguardar_Click);
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(333, 35);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(18, 13);
+            this.label17.TabIndex = 59;
+            this.label17.Text = "ID";
+            // 
+            // txtid
+            // 
+            this.txtid.AutoSize = true;
+            this.txtid.Location = new System.Drawing.Point(416, 35);
+            this.txtid.Name = "txtid";
+            this.txtid.Size = new System.Drawing.Size(41, 13);
+            this.txtid.TabIndex = 60;
+            this.txtid.Text = "label18";
+            // 
+            // btnactualizar
+            // 
+            this.btnactualizar.Location = new System.Drawing.Point(856, 577);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Size = new System.Drawing.Size(145, 34);
+            this.btnactualizar.TabIndex = 61;
+            this.btnactualizar.Text = "ACTUALIZAR EMPRESA";
+            this.btnactualizar.UseVisualStyleBackColor = true;
+            this.btnactualizar.Click += new System.EventHandler(this.btnactualizar_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1162, 25);
+            this.toolStrip1.TabIndex = 63;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(45, 22);
+            this.toolStripButton1.Text = "INICIO";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton2.Text = "toolStripButton2";
+            // 
             // AltaEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1162, 623);
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.btnactualizar);
+            this.Controls.Add(this.txtid);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.btnguardar);
             this.Controls.Add(this.btnimagen);
             this.Controls.Add(this.txtimagen);
@@ -396,6 +466,8 @@
             this.Text = "AltaEmpresa";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AltaEmpresa_Load);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,5 +510,11 @@
         private System.Windows.Forms.TextBox txtimagen;
         private System.Windows.Forms.Button btnimagen;
         private System.Windows.Forms.Button btnguardar;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label txtid;
+        private System.Windows.Forms.Button btnactualizar;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
     }
 }

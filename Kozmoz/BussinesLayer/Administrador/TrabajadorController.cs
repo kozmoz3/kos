@@ -31,21 +31,30 @@ namespace BussinesLayer.Administrador
             }
         }
 
-        public void alta_trabajador(trabajador dtotabajador, usuario dtousuario)
+        public bool alta_trabajador(int idempresa, String departamento, trabajador dto)
         {
-
             try
             {
                 using (kosmozbusEntities db = new kosmozbusEntities())
                 {
-
-                    
+                    var depa = (from n in db.departamentoes
+                                    where n.idempresafk== idempresa && 
+                                    n.nombre == departamento
+                                    select n).First();
+                    dto.iddepartamentofk = depa.id;
+                    db.trabajadors.Add(dto);
+                    if (db.SaveChanges() > 0)
+                    {
+                        return true;
+                    }
+                    return false;
                 }
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error alta de trabajador" + ex);
+                return false;
                 throw;
             }
         }

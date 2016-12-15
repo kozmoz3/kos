@@ -59,5 +59,24 @@ namespace Vista.Administrador
             empresa.MdiParent = this;
             empresa.Show();
         }
+
+        private void btncerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void aLTADEDEPARTAMENTOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AltaDepartamento departamento = new AltaDepartamento(lbusuario.Text);
+            departamento.MdiParent = this;
+            departamento.Show();
+        }
+
+        private void aLTADETRABAJADORToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AltaTrabajador trabajador = new AltaTrabajador(lbusuario.Text);
+            trabajador.MdiParent = this;
+            trabajador.Show();
+        }
     }
 }
