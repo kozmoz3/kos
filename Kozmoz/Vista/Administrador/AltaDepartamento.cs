@@ -138,7 +138,7 @@ namespace Vista.Administrador
         //    MessageBox.Show(nombrenodo);
            List<departamento> depa= funcion.listar_departamento(nombrenodo, id);
            var indice = depa[0];
-
+           txtid.Text = indice.id+"";
            txtnombre.Text = indice.nombre;
            txtnombrecorto.Text = indice.nombre_corto;
            txtimagen.Text = indice.imagen;
@@ -160,7 +160,38 @@ namespace Vista.Administrador
 
         private void btnactualizar_Click(object sender, EventArgs e)
         {
+            if (txtid.Text == "")
+            {
+                MessageBox.Show("Error al Actualizar", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                return;
+            }
+            int id = int.Parse(txtid.Text);
+            int idfk = cmbempresa.SelectedIndex + 1;
+            dao.idempresafk = idfk;
+            dao.nombre = txtnombre.Text;
+            dao.nombre_corto = txtnombrecorto.Text;
+            dao.imagen = txtimagen.Text;
+            dao.no_departamento = txtnum.Text;
+            dao.fecha_creacion = fechaHoy;
+            dao.calle = txtcalle.Text;
+            dao.colonia = txtcolonia.Text;
+            dao.cp = int.Parse(txtcp.Text);
+            dao.municipio = txtmunicipio.Text;
+            dao.ciudad = txtciudad.Text;
+            dao.encargado1 = txtencargado1.Text;
+            dao.encargado2 = txtencargado.Text;
+            dao.correo1 = txtcorreo1.Text;
+            dao.coreo2 = txtcorreo2.Text;
+            dao.telefono1 = txttelefono1.Text;
+            dao.telefono2 = txttelefono2.Text;
+            
 
+            if (funcion.actualizar_departamento(dao,id, idfk))
+            {
+                MessageBox.Show("Se Actualizo Correctamente ", "", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                limpiar();
+               
+            }
         }
 
     }

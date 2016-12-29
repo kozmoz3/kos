@@ -1,2 +1,8 @@
 --rutas treview y entity
 https://www.youtube.com/watch?v=HKVwYz7BnUA
+
+--como usar la herramine
+https://www.youtube.com/watch?v=kGcfh1HopPg
+
+erramients y galerias
+http://www.devcomponents.com/dotnetbar/

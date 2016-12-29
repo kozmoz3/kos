@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="kosmozbusModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="kosmozbusEntities" p1:LazyLoadingEnabled="true">
+<Schema Namespace="kosmozbusModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="kosmozbusEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="actualizacions" EntityType="kosmozbusModel.actualizacion" />
     <EntitySet Name="departamentoes" EntityType="kosmozbusModel.departamento" />
     <EntitySet Name="empresaservicios" EntityType="kosmozbusModel.empresaservicio" />
@@ -36,12 +36,17 @@
       <End Role="municipio" EntitySet="municipios" />
       <End Role="cp" EntitySet="cps" />
     </AssociationSet>
+    <EntitySet Name="patios" EntityType="kosmozbusModel.patio" />
+    <AssociationSet Name="patio_ibfk_1" Association="kosmozbusModel.patio_ibfk_1">
+      <End Role="empresaservicio" EntitySet="empresaservicios" />
+      <End Role="patio" EntitySet="patios" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="actualizacion">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="usuario" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="nombre_tabla" Type="String" MaxLength="35" Unicode="false" FixedLength="false" />
     <Property Name="registro" Type="String" MaxLength="35" Unicode="false" FixedLength="false" />
@@ -51,7 +56,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idempresafk" Type="Int32" />
     <Property Name="no_departamento" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
     <Property Name="nombre" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
@@ -76,7 +81,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="nombre_corto" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
     <Property Name="cabezera" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
@@ -94,12 +99,13 @@
     <Property Type="String" Name="coreo2" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="telefono1" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Type="String" Name="telefono2" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="patios" Relationship="kosmozbusModel.patio_ibfk_1" FromRole="empresaservicio" ToRole="patio" />
   </EntityType>
   <EntityType Name="log">
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="fecha" Type="DateTime" Precision="0" />
     <Property Name="usuario" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="tabla" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
@@ -110,7 +116,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombre" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
     <Property Name="descripcion" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
     <Property Name="fecha_creaccion" Type="DateTime" Precision="0" />
@@ -119,7 +125,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="iddepartamentofk" Type="Int32" />
     <Property Name="nombre" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
     <Property Name="edad" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
@@ -137,7 +143,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="idtrabajadorfk" Type="Int32" />
     <Property Name="usuario1" Type="String" MaxLength="65" Unicode="false" FixedLength="false" />
     <Property Name="contrasena" Type="String" MaxLength="65" Unicode="false" FixedLength="false" />
@@ -249,6 +255,41 @@
       </Principal>
       <Dependent Role="cp">
         <PropertyRef Name="clavemfk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="patio">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="idempresafk" />
+    <Property Type="String" Name="nombre" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="nombre_corto" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="capacidad" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="calle" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="colonia" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="municipio" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="cp" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ciudad" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="encargado1" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="encargado2" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="correo1" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="correo2" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="telefono1" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="telefono2" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="fecha_creacion" Precision="0" />
+    <NavigationProperty Name="empresaservicio" Relationship="kosmozbusModel.patio_ibfk_1" FromRole="patio" ToRole="empresaservicio" />
+  </EntityType>
+  <Association Name="patio_ibfk_1">
+    <End Type="kosmozbusModel.empresaservicio" Role="empresaservicio" Multiplicity="0..1" />
+    <End Type="kosmozbusModel.patio" Role="patio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="empresaservicio">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="patio">
+        <PropertyRef Name="idempresafk" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

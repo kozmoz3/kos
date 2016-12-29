@@ -22,6 +22,8 @@
         <AssociationConnector Association="kosmozbusModel.municipio_ibfk_1" />
         <AssociationConnector Association="kosmozbusModel.colonia_ibfk_1" />
         <AssociationConnector Association="kosmozbusModel.cp_ibfk_1" />
+        <EntityTypeShape EntityType="kosmozbusModel.patio" Width="1.5" PointX="5.8203554832471323" PointY="27.020057720607173" />
+        <AssociationConnector Association="kosmozbusModel.patio_ibfk_1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

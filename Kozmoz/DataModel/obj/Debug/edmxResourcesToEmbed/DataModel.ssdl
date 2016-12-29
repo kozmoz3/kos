@@ -9,6 +9,7 @@
     <EntitySet Name="empresaservicio" EntityType="kosmozbusModel.Store.empresaservicio" store:Type="Tables" Schema="kosmozbus" />
     <EntitySet Name="log" EntityType="kosmozbusModel.Store.log" store:Type="Tables" Schema="kosmozbus" />
     <EntitySet Name="municipio" EntityType="kosmozbusModel.Store.municipio" store:Type="Tables" Schema="kosmozbus" />
+    <EntitySet Name="patio" EntityType="kosmozbusModel.Store.patio" store:Type="Tables" Schema="kosmozbus" />
     <EntitySet Name="rol" EntityType="kosmozbusModel.Store.rol" store:Type="Tables" Schema="kosmozbus" />
     <EntitySet Name="trabajador" EntityType="kosmozbusModel.Store.trabajador" store:Type="Tables" Schema="kosmozbus" />
     <EntitySet Name="usuario" EntityType="kosmozbusModel.Store.usuario" store:Type="Tables" Schema="kosmozbus" />
@@ -27,6 +28,10 @@
     <AssociationSet Name="municipio_ibfk_1" Association="kosmozbusModel.Store.municipio_ibfk_1">
       <End Role="ciudad" EntitySet="ciudad" />
       <End Role="municipio" EntitySet="municipio" />
+    </AssociationSet>
+    <AssociationSet Name="patio_ibfk_1" Association="kosmozbusModel.Store.patio_ibfk_1">
+      <End Role="empresaservicio" EntitySet="empresaservicio" />
+      <End Role="patio" EntitySet="patio" />
     </AssociationSet>
     <AssociationSet Name="trabajador_ibfk_1" Association="kosmozbusModel.Store.trabajador_ibfk_1">
       <End Role="departamento" EntitySet="departamento" />
@@ -132,6 +137,28 @@
     <Property Name="clavecfk" Type="int" />
     <Property Name="nombrem" Type="varchar" MaxLength="100" />
   </EntityType>
+  <EntityType Name="patio">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="idempresafk" Type="int" />
+    <Property Name="nombre" Type="varchar" MaxLength="60" />
+    <Property Name="nombre_corto" Type="varchar" MaxLength="60" />
+    <Property Name="capacidad" Type="varchar" MaxLength="12" />
+    <Property Name="calle" Type="varchar" MaxLength="30" />
+    <Property Name="colonia" Type="varchar" MaxLength="30" />
+    <Property Name="municipio" Type="varchar" MaxLength="30" />
+    <Property Name="cp" Type="varchar" MaxLength="11" />
+    <Property Name="ciudad" Type="varchar" MaxLength="30" />
+    <Property Name="encargado1" Type="varchar" MaxLength="70" />
+    <Property Name="encargado2" Type="varchar" MaxLength="70" />
+    <Property Name="correo1" Type="varchar" MaxLength="60" />
+    <Property Name="correo2" Type="varchar" MaxLength="60" />
+    <Property Name="telefono1" Type="varchar" MaxLength="15" />
+    <Property Name="telefono2" Type="varchar" MaxLength="15" />
+    <Property Name="fecha_creacion" Type="datetime" />
+  </EntityType>
   <EntityType Name="rol">
     <Key>
       <PropertyRef Name="id" />
@@ -213,6 +240,18 @@
       </Principal>
       <Dependent Role="municipio">
         <PropertyRef Name="clavecfk" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="patio_ibfk_1">
+    <End Role="empresaservicio" Type="kosmozbusModel.Store.empresaservicio" Multiplicity="0..1" />
+    <End Role="patio" Type="kosmozbusModel.Store.patio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="empresaservicio">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="patio">
+        <PropertyRef Name="idempresafk" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

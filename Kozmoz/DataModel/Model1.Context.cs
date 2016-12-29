@@ -36,5 +36,6 @@ namespace DataModel
         public DbSet<colonia> colonias { get; set; }
         public DbSet<cp> cps { get; set; }
         public DbSet<municipio> municipios { get; set; }
+        public DbSet<patio> patios { get; set; }
     }
 }

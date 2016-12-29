@@ -116,7 +116,7 @@ namespace Vista.Administrador
             dao.telefono2 = txttelefono2.Text;
             int id = int.Parse(txtid.Text);
             if(funcion.actualizar_empresa(dao,id)){
-                MessageBox.Show("Error al registra ", "", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                MessageBox.Show("Se rActualizo Correctamente ", "", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
                 limpiar();
                 txtid.Text = "";
             }

@@ -41,6 +41,7 @@ namespace BussinesLayer.Administrador
                                     where n.idempresafk== idempresa && 
                                     n.nombre == departamento
                                     select n).First();
+                    MessageBox.Show(depa.id+"");
                     dto.iddepartamentofk = depa.id;
                     db.trabajadors.Add(dto);
                     if (db.SaveChanges() > 0)

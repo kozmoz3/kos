@@ -48,3 +48,9 @@ C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\De
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\bin\Debug\Validaciones.pdb
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Administrador.AltaDepartamento.resources
 C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Administrador.AltaTrabajador.resources
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Administrador.AboutBox1.resources
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Administrador.MDIParent1.resources
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Administrador.Tipos_Usuarios.resources
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Administrador.Alta_Patios.resources
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Administrador.MenuAdmin2.resources
+C:\Users\ESosa\Google Drive\repertorio\Nueva carpeta (2)\kos\Kozmoz\Vista\obj\Debug\Vista.Administrador.Alta_Vehiculo.resources

@@ -66,6 +66,8 @@
     <Compile Include="Administrador\DepartamentoController.cs" />
     <Compile Include="Administrador\EmpresaController.cs" />
     <Compile Include="Administrador\LoginController.cs" />
+    <Compile Include="Administrador\MenuController.cs" />
+    <Compile Include="Administrador\PatioController.cs" />
     <Compile Include="Administrador\TrabajadorController.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Form1.cs">

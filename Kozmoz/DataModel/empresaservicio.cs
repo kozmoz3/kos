@@ -17,6 +17,7 @@ namespace DataModel
         public empresaservicio()
         {
             this.departamentoes = new HashSet<departamento>();
+            this.patios = new HashSet<patio>();
         }
     
         public int id { get; set; }
@@ -38,5 +39,6 @@ namespace DataModel
         public string telefono2 { get; set; }
     
         public virtual ICollection<departamento> departamentoes { get; set; }
+        public virtual ICollection<patio> patios { get; set; }
     }
 }
