@@ -44,6 +44,24 @@ namespace BussinesLayer.Administrador
             }
 
         }
+        public List<patio> muestraPatio()
+        {
+            try
+            {
+
+                using (kosmozbusEntities db = new kosmozbusEntities())
+                {
+                    var query = (from n in db.patios
+                                 select n).ToList();
+                    return query;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al listar  patios-> " + ex);
+                throw;
+            }
+        }
 
     }
 }
